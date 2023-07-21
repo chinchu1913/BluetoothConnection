@@ -23,7 +23,7 @@ import com.example.bluetoothconnection.presentation.BluetoothUiState
 @Composable
 fun DeviceScreen(state: BluetoothUiState, onStartScan: () -> Unit, onStopScan: () -> Unit) {
     Column(modifier = Modifier.fillMaxSize()) {
-
+BluetoothDeviceList(pairedDevice = state.pairedDevices, scannedDevice =state.scannedDevice , onClick ={} , modifier =Modifier.fillMaxWidth().weight(1f) )
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround) {
             Button(onClick = onStartScan) {
                 Text(text = "Start Scan")
